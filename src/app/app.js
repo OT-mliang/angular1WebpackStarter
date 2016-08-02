@@ -4,18 +4,20 @@ import ngAnimate from 'angular-animate';
 import ngAria from 'angular-aria';
 import uiRouter from 'angular-ui-router';
 
-import toolbarComponent from "./toolbar/toolbar.component";
+import toolbar from "./toolbar/toolbar.component";
 import login from "./login/index";
 
+/*@ngInject*/
 const root = angular.module('my-app', [
     ngMaterial,
     ngAnimate,
     ngAria,
     uiRouter,
-    toolbarComponent,
+    toolbar,
     login
 
 ]).config(($locationProvider,$urlRouterProvider)=>{
+    'ngInject';
     $locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise("/");
 }).name;

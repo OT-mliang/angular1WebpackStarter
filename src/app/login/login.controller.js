@@ -1,4 +1,5 @@
 class LoginController {
+    /*@ngInject*/
     constructor() {
         
     }
